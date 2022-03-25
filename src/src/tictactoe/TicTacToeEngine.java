@@ -22,8 +22,7 @@ public class TicTacToeEngine  //extends GameEngine<TicTacToePlayer,TicTacToeGame
     public void start() {
         String result, move, win;
         Boolean gameOver = false;
-        System.out.println(game.getBoard());
-                //printBoard();
+             game.printBoard();
               while(!gameOver){
                for (int x = 0; x < 2 ; x++) {
                     do {

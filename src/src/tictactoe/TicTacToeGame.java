@@ -4,7 +4,7 @@ package tictactoe;
 
 public class TicTacToeGame //extends Game<String,Character>
 {
-    Character [][] board;
+   static Character [][] board;
 
     public TicTacToeGame(){
         board = new Character[][]{{' ', ' ', ' '}, {' ', ' ', ' '},{' ',' ',' '}};
@@ -38,7 +38,7 @@ public class TicTacToeGame //extends Game<String,Character>
         return "Move Complete";
     }
 
-    public  void board(Character[][] matrix) {
+    public  static void board(Character[][] matrix) {
         board = matrix;
     }
 
@@ -137,23 +137,23 @@ public class TicTacToeGame //extends Game<String,Character>
          System.out.println("\n");
      }
 
-     public String getBoard(){
-        String gameBoard = "";
-         for (int i = 0; i <= 2; i++) {
-             for (int j = 0; j <= 2; j++) {
-                 if (board[i][j] != null) {
-                     gameBoard += board[i][j] + "";
-                 } else gameBoard += " ";
-                 if (j < 2) {
-                    gameBoard += "|";
-                 }
-
-             }
-             if (i < 2) {
-                 gameBoard += "\n-+-+-";
-             }
-         }
-         return gameBoard + "\n";
-     }
+//     public String getBoard(){
+//        String gameBoard = "";
+//         for (int i = 0; i <= 2; i++) {
+//             for (int j = 0; j <= 2; j++) {
+//                 if (board[i][j] != null) {
+//                     gameBoard += board[i][j] + "";
+//                 } else gameBoard += " ";
+//                 if (j < 2) {
+//                    gameBoard += "|";
+//                 }
+//
+//             }
+//             if (i < 2) {
+//                 gameBoard += "\n-+-+-";
+//             }
+//         }
+//         return gameBoard + "\n";
+//     }
 
 }
