@@ -15,7 +15,7 @@ public class TicTacToePlayer {
   public String getMove() {
       Scanner scanner = new Scanner(System.in);
      // try{
-          System.out.println(player.fName +" Please enter where you want to move(0-2)(eg 0 0):");
+          System.out.println(player.fName +" Please enter where you want to move(1-3)(eg 1 1):");
           String input = scanner.nextLine();
           return input;
     //  }catch (InputMismatchException e){

@@ -4,7 +4,7 @@ package tictactoe;
 
 public class TicTacToeGame //extends Game<String,Character>
 {
-   static Character [][] board;
+   public static Character [][] board;
 
     public TicTacToeGame(){
         board = new Character[][]{{' ', ' ', ' '}, {' ', ' ', ' '},{' ',' ',' '}};
@@ -28,6 +28,8 @@ public class TicTacToeGame //extends Game<String,Character>
         String[] arrayString = move.split(" ");
         int x = Integer.valueOf(arrayString[0]);
         int y = Integer.valueOf(arrayString[1]);
+        x--;
+        y--;
         if (!boardFull()) {
             if ((checkInts(x)) && (checkInts(y)) &&(board[x][y] == ' ')) {
                 board[x][y] = marker;
@@ -71,7 +73,7 @@ public class TicTacToeGame //extends Game<String,Character>
         return false;
     }
 
-    boolean checkColumns(char answer){
+    public boolean checkColumns(char answer){
         int xs = 0;
         for(int i = 0; i <=2; i++){
             for (int j = 0; j <= 2;j++){
@@ -85,7 +87,7 @@ public class TicTacToeGame //extends Game<String,Character>
         return false;
     }
 
-    boolean checkDiagonals(char answer){
+    public boolean checkDiagonals(char answer){
         int xs = 0;
         for(int i = 0; i <=2; i++){
             if (board[i][i] == answer)

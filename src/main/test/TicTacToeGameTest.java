@@ -1,6 +1,6 @@
-package tictactoe;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import tictactoe.TicTacToeGame;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -59,13 +59,13 @@ class TicTacToeGameTest {
     @org.junit.jupiter.api.Test
     void checkIntsTest_True() {
         int x = 2;
-        assertTrue(TicTacToeGame.checkInts(x));
+        Assertions.assertTrue(TicTacToeGame.checkInts(x));
     }
 
     @org.junit.jupiter.api.Test
     void checkIntsTest_False() {
         int x = 6;
-        assertFalse(TicTacToeGame.checkInts(x));
+        Assertions.assertFalse(TicTacToeGame.checkInts(x));
     }
 
     @org.junit.jupiter.api.Test
@@ -77,7 +77,7 @@ class TicTacToeGameTest {
                 {'X', ' ', 'X'},
                 {'O', 'X', 'O'}
         });
-        String move = "1 1";
+        String move = "2 2";
         String expected = "Move Complete";
         //when
         String actual = tt.turn(move,'X');
@@ -327,6 +327,6 @@ class TicTacToeGameTest {
         //when
         TicTacToeGame tt2 = new TicTacToeGame();
         //then
-        assertEquals(tt.board,tt2.board);
+        Assertions.assertEquals(tt.board,tt2.board);
     }
 }

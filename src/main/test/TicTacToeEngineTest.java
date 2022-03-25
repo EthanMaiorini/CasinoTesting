@@ -1,6 +1,9 @@
-package tictactoe;
-
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import tictactoe.Person;
+import tictactoe.TicTacToeEngine;
+import tictactoe.TicTacToeGame;
+import tictactoe.TicTacToePlayer;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -90,6 +93,6 @@ class TicTacToeEngineTest {
 
         game = x.getGame();
 
-        assertEquals(tt.board,game.board);
+        Assertions.assertEquals(tt.board,game.board);
     }
 }

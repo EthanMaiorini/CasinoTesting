@@ -33,6 +33,7 @@ public class TicTacToeEngine  //extends GameEngine<TicTacToePlayer,TicTacToeGame
                             if (win.equals( "Winner is " + player1.player.fName)) {
                                 gameOver = true;
                                 System.out.println(win);
+                                x =2;
                                 break;
                             }
                         } else {
@@ -58,7 +59,7 @@ public class TicTacToeEngine  //extends GameEngine<TicTacToePlayer,TicTacToeGame
                    }
                    //ask if you want to exit
             }
-            replay();
+        replay();
     }
 
     public TicTacToeGame getGame() {
@@ -100,6 +101,7 @@ public class TicTacToeEngine  //extends GameEngine<TicTacToePlayer,TicTacToeGame
         TicTacToePlayer joeT = new TicTacToePlayer(joe);
         TicTacToeEngine x = new TicTacToeEngine(game,bobT,joeT);
         x.start();
+
     }
 
 //    public Iterable<Person> getPlayers() {
